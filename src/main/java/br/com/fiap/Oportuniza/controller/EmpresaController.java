@@ -45,8 +45,8 @@ public class EmpresaController {
 		 	Empresa empresa = empresaExistente.get();
 		 	empresa.setNome(empresasAtualizado.getNome());
 		 	empresa.setEmail(empresasAtualizado.getEmail());
-		 	empresa.setCpf(empresasAtualizado.getCnpj());
-		 	EmpresaRepository.save(empresa);
+		 	empresa.setCnpj(empresasAtualizado.getCnpj());
+		 	empresaRepository.save(empresa);
 		 	return ResponseEntity.ok(empresa);
 		 } else {
 		 	return ResponseEntity.notFound().build();
